@@ -4,7 +4,7 @@ $XLSPath = "./BluestreakActiveUsers.xls"
 If (-not (Test-Path $XLSX)) {
     If (Test-Path $XLSPath) {
         ConvertTo-ExcelXlsx -Path $XLSPath
-        #Remove-Item -Path $XLSPath
+        Remove-Item -Path $XLSPath
     } Else {
         Write-Host "File" ($XLSPath.Substring(2)) "not found!" -BackgroundColor Red
         Exit 1
